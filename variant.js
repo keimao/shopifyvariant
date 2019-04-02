@@ -3,11 +3,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
 const prefix = config.prefix;
-const ob 
 function stockExtraction(body) {
   length = body.product.variants.length
   for (i = 0; i < length; i++) {
-      {
+     let variables = {
       name: `Size: ${body.product.variants[i].title}`,
       value: `Variant: ${body.product.variants[i].id}`
     }
